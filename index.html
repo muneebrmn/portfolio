@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Muneeb</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+</head>
+<body>
+    <div class="parent">
+        <div class="main">
+
+            <div class="social">
+                <a href="https://www.linkedin.com/in/muneeb-ur-rehman-076768260/">LinkedIn</a>
+                <a href="https://github.com/muneebrmn">GitHub</a>
+                <a href="https://www.instagram.com/manimunib/">Instagram</a>
+            </div>
+
+            <div class="image">
+                <img src="Me.jpg" alt="" width="80px">
+            </div>
+
+            <div class="name">
+                <h1>
+                    Hi, I'm <b>&lt;/</b> Muneeb Ur Rehman <b>/&gt;</b>
+                </h1>
+            </div>
+
+            <div class="container">
+                <span class="text first-text"></span>
+                <span class="text sec-text">...</span>
+            </div>
+
+            <div class="text">
+                <p>A student trying to learn Web Development. Proficient with HTML & CSS. Currently doing A-Levels in Mathematics, Computer Science and Physics privately. I'm Passionate about coding and I like to play football and video games.</p>
+            </div>
+
+            <div class="topskills">
+                <h2>Top Skills</h2>
+                <p>HTML . CSS . Pseudocode . Basic Python Syntax</p>
+            </div>
+        
+            <div class="btn">
+                <button>Say Hello</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        const text = document.querySelector(".sec-text");
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "...";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "...";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "...";
+            }, 8000); //1s = 1000 milliseconds
+        }
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
+    
+</body>
+</html>
