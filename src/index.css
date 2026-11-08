@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Audiowide', sans-serif;
+}
+
+.hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #e8e8e8;
+}
+
+.skills-background-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #eaeaea;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-preview-enter {
+    animation: project-box-slide 850ms ease-in-out both;
+  }
+
+  .project-details-enter {
+    animation: project-details-slide 850ms ease-in-out both;
+  }
+}
+
+@keyframes project-box-slide {
+  from {
+    transform: translate(calc(var(--project-travel-x) * (var(--project-tile) + 10px)), calc(var(--project-travel-y) * (var(--project-tile) + 10px)));
+    opacity: 0.65;
+  }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes project-details-slide {
+  from { transform: translate(calc(var(--project-travel-x) * 20px), calc(var(--project-travel-y) * 20px)); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.skill-card {
+  --skill-spacing: 140px;
+  transform: translateX(calc(-50% + var(--skill-offset) * var(--skill-spacing))) translateY(calc(var(--skill-depth) * clamp(40px, 5vw, 65px))) scale(var(--skill-scale));
+}
+
+@media (min-width: 640px) {
+  .skill-card {
+    --skill-spacing: 190px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-card {
+    --skill-spacing: clamp(215px, 19vw, 290px);
+  }
+}
